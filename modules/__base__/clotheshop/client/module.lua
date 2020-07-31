@@ -87,6 +87,12 @@ module.OpenClotheShopMenu = function()
   menu:on('item.click', function(item, index)
     if item.name == 'close' then
       menu:destroy()
+      
+      Interact.ShowHelpNotification(_U('clotheshop:press_menu'))
+
+      module.CurrentAction = function()
+        module.OpenClotheShopMenu()
+      end
     end
   end)
 end
