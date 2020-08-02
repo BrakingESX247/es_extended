@@ -44,7 +44,7 @@ if module.Config.EnableControls then
   Input.On('released', Input.Groups.MOVE, Input.Controls.REPLAY_SHOWHOTKEY, function(lastPressed)
 
     if not ESX.IsDead then
-      module.OpenClotheShopMenu()
+      module.openedMenu()
     end
   end)
 
